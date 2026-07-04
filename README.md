@@ -20,7 +20,7 @@ Two zones, one L3 switch enforcing the boundary:
 **IP Plan**
 ```
 ____________________________________________________________
-Device         IP Address     Subnet Mask      Gateway  
+Device        IP Address      Subnet Mask      Gateway  
 ------------------------------------------------------------
 Corp-PC1      10.10.10.10    255.255.255.0    10.10.10.1
 Corp-PC2      10.10.10.11    255.255.255.0    10.10.10.1
@@ -83,7 +83,7 @@ The **matches** counter confirms the policy is actively enforcing.
 
 **Test Results**
 ```
-   **PING**          **From**            **To**             **Expected**    **Result**  
+      PING             From            To                     Expected        Result
 ----------------------------------------------------------------------------------------
 Guest → Corporate    Guest-PC1    Corp-PC1 (10.10.10.10)      BLOCKED           ✓
 Guest → Same VLAN    Guest-PC1    Guest-PC2 (10.10.20.11)     ALLOWED           ✓
