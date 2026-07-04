@@ -8,8 +8,7 @@ This lab simulates the outcome of Intent-Based Networking (IBN) — manually imp
 Built in Cisco Packet Tracer using VLANs, inter-VLAN routing, and an extended ACL on a Layer 3 switch.
 
 **Topology**
-
-Show Image
+![Topology Diagram](screenshots/IBN_topology.png)
 ```
 Two zones, one L3 switch enforcing the boundary:
 •	Corporate zone —> VLAN 10, subnet 10.10.10.0/24
@@ -69,14 +68,14 @@ interface vlan 20
 ```
 **Verification**
 ```
-Show Image
-
 show ip access-lists GUEST_POLICY
 ```
+![ACL hit counter output](screenshots/acl_hitcount.png)
+
 Expected output:
 --------------------------------------
 Extended IP access list GUEST_POLICY
-    deny ip 10.10.20.0 0.0.0.255 10.10.10.0 0.0.0.255 (4 matches)
+    deny ip 10.10.20.0 0.0.0.255 10.10.10.0 0.0.0.255 (8 matches)
     permit ip 10.10.20.0 0.0.0.255 any
 
 The **matches** counter confirms the policy is actively enforcing.
@@ -90,6 +89,7 @@ Guest → Same VLAN    Guest-PC1    Guest-PC2 (10.10.20.11)     ALLOWED         
 Guest → Internet     Guest-PC1    8.8.8.8                     ALLOWED           ✓
 Corp  → Guest        Corp-PC1     Guest-PC1 (10.10.20.10)     ALLOWED           ✓
 ```
+![ACL hit counter output](screenshots/blocked.png)
 
 **Debugging Note**
 ```
@@ -116,7 +116,7 @@ interface fa0/1
 ```
 
 
-**Tools**
+**Tools & Devices**
 ```
 •	Cisco Packet Tracer 8.x
 •	Cisco Catalyst 3650 (L3 switch)
