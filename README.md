@@ -82,20 +82,21 @@ Extended IP access list GUEST_POLICY
 The **matches** counter confirms the policy is actively enforcing.
 
 **Test Results**
-
+```
    **PING**          **From**            **To**             **Expected**    **Result**  
 ----------------------------------------------------------------------------------------
 Guest → Corporate    Guest-PC1    Corp-PC1 (10.10.10.10)      BLOCKED           ✓
 Guest → Same VLAN    Guest-PC1    Guest-PC2 (10.10.20.11)     ALLOWED           ✓
 Guest → Internet     Guest-PC1    8.8.8.8                     ALLOWED           ✓
 Corp  → Guest        Corp-PC1     Guest-PC1 (10.10.20.10)     ALLOWED           ✓
-
+```
 
 **Debugging Note**
+```
 -> Cross-VLAN routing failed during the build despite correct SVI and ACL configuration. 
 -> Root cause: a trunk port on the Corp switch had silently flipped to access mode.
 -> "show interfaces trunk" returned no output for that port — not an error, just a missing line. That absence was the clue. A port not listed as trunking is the problem, not a logged fault.
-
+```
 **Fix:**
 -------------------------------------
 interface fa0/1
