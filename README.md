@@ -16,8 +16,9 @@ Two zones, one L3 switch enforcing the boundary:
 •	Guest zone     —> VLAN 20, subnet 10.10.20.0/24
 •	L3 switch      —> SVIs for both VLANs, ACL applied inbound on VLAN 20
 •	Router         —> simulates internet uplink via loopback (8.8.8.8)
-
+```
 **IP Plan**
+```
 ____________________________________________________________
 Device         IP Address     Subnet Mask      Gateway  
 ------------------------------------------------------------
@@ -31,9 +32,9 @@ Router Gig0/0 192.168.1.1    255.255.255.252       —
 L3Switch UpL  192.168.1.     2255.255.255.252      —
 Internet      8.8.8.8        255.255.255.255       —
 ____________________________________________________________
-
+```
 **Key Configuration**
-
+```
 VLANs on L3 Switch
 -------------------
 vlan 10
@@ -65,13 +66,13 @@ Applied Inbound on VLAN 20
 --------------------------------------
 interface vlan 20
  ip access-group GUEST_POLICY in
-
+```
 **Verification**
-
+```
 Show Image
 
 show ip access-lists GUEST_POLICY
-
+```
 Expected output:
 --------------------------------------
 Extended IP access list GUEST_POLICY
@@ -103,6 +104,7 @@ interface fa0/1
 
 
 **Concepts Covered**
+```
 •	VLAN segmentation and trunk configuration (802.1Q)
 •	Inter-VLAN routing via SVI on a Cisco Catalyst 3650
 •	Extended named ACLs: source/destination filtering, wildcard masks
@@ -110,10 +112,11 @@ interface fa0/1
 •	Layer 2 flooding vs Layer 3 routed delivery
 •	Point-to-point /30 subnetting for router uplinks
 •	Intent-Based Networking principles: manual implementation
-
+```
 
 
 **Tools**
+```
 •	Cisco Packet Tracer 8.x
 •	Cisco Catalyst 3650 (L3 switch)
 •	Cisco Catalyst 2960 (access switches)
