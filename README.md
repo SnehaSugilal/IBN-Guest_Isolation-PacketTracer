@@ -10,7 +10,7 @@ Built in Cisco Packet Tracer using VLANs, inter-VLAN routing, and an extended AC
 **Topology**
 
 Show Image
-
+```
 Two zones, one L3 switch enforcing the boundary:
 •	Corporate zone —> VLAN 10, subnet 10.10.10.0/24
 •	Guest zone     —> VLAN 20, subnet 10.10.20.0/24
@@ -118,3 +118,4 @@ interface fa0/1
 •	Cisco Catalyst 3650 (L3 switch)
 •	Cisco Catalyst 2960 (access switches)
 •	Cisco 2911 Router
+```
