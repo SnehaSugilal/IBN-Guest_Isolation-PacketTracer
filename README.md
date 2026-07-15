@@ -11,7 +11,7 @@ This lab simulates the outcome of Intent-Based Networking (IBN) — manually imp
 
 Built in Cisco Packet Tracer using VLANs, inter-VLAN routing, and an extended ACL on a Layer 3 switch.
 
-**Topology**
+## Topology
 
 ![Topology Diagram](screenshots/IBN_topology.png)
 ```
