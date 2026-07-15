@@ -1,9 +1,9 @@
-# Part 1 — IBN Guest Isolation Lab | Packet Tracer
+# Part 1 - IBN Guest Isolation Lab | Packet Tracer
 Packet Tracer lab simulating Intent-Based Networking: Guest network isolated from Corporate using VLANs, inter-VLAN routing, and an extended ACL on a Cisco Layer 3 switch.
 
 ## Lab Series
-- [Part 1 — IBN Guest Isolation](README.md)
-- [Part 2 — MAC Learning](Part2_MACLearning/README.md)
+- [Part 1 - IBN Guest Isolation](README.md)
+- [Part 2 - MAC Learning](Part2_MACLearning/README.md)
   
 **Intent**: Guests cannot reach corporate resources. Guests can still access the internet.
 
