@@ -73,8 +73,6 @@ Check it with:
 Switch# show mac address-table aging-time
 ```
 
-The learning never really stops.
-
 ---
 
 The ACL enforced the policy. But MAC learning explained the forwarding asymmetry. Two different mechanisms. One simulation.
